@@ -10,6 +10,18 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="assets/js/bootstrap-modal.js"></script> 
+    <script src="assets/js/bootstrap-transition.js"></script> 
+    
+
+
+
+
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -18,7 +30,7 @@
       }
 
       .form-signin {
-        max-width: 300px;
+        max-width: 350px;
         padding: 19px 29px 29px;
         margin: 0 auto 20px;
         background-color: #fff;
@@ -31,8 +43,23 @@
                 box-shadow: 0 1px 2px rgba(0,0,0,.05);
 
       }
-      
-      
+
+       .form-signup {
+        max-width: 360px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+      }
+
+
       .form-signin .form-signin-heading,
       .form-signin .checkbox {
         margin-bottom: 10px;
@@ -52,13 +79,7 @@
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+    
   </head>
 
   <body>
@@ -69,36 +90,67 @@
         <br><br><br>
         <div class="container">
 
-      <form class="form-signin">
-        <h3 class="form-signin-heading">Quick Results</h3>
-        <input type="text" class="input-block-level" placeholder="Enter USN">
-        <button class="btn btn-small btn-primary" type="submit">Quick Search</button>
-      </form>
+        <form class="form-signin">
+          <h3 class="form-signin-heading">Quick Results</h3>
+          <input type="text" class="input-block-level" placeholder="Enter USN">
+          <button class="btn btn-small btn-primary" type="submit">Quick Search</button>
+        </form>
 
-      <form class="form-signin">
-        <h3 class="form-signin-heading">Please Sign In</h3>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-small btn-primary" type="submit">Sign in</button>
-        <br><br>
+        <form class="form-signin">
+          <h3 class="form-signin-heading">Please Sign In</h3>
+          <input type="text" class="input-block-level" placeholder="Email address">
+          <input type="password" class="input-block-level" placeholder="Password">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+          <button class="btn btn-small btn-primary" type="submit">Sign in</button>
+          <br><br>
+        </form>
 
+        <form class="form-signin">
+          <h3 class="form-signin-heading">Register For Benefits</h3>
+                <a data-toggle="modal" href="#signup" class="btn btn-small btn-primary">Create A New Account</a> Or
+          <img src="assets/img/fb_login.png" >
+        </form>
 
-      </form>
-
-      <form class="form-signin">
-        <h3 class="form-signin-heading">Register For Benefits</h3>
-              <button class="btn btn-small btn-primary" type="submit">Register With US</button> Or
-        <img src="assets/img/fb_login.png" >
-      </form>
-
-    </div> 
+         </div> 
 
 
       </div>
     </div>
     
+
+
+
+
+
+
+    <div class="container">  
+ 
+<div id="signup" class="modal hide fade" style="display: none; ">  
+<div class="modal-header">  
+<a class="close" data-dismiss="modal">×</a>  
+<h3>Create A New Account</h3>  
+</div>  
+<div class="modal-body">
+
+<form class="form-signup">
+         
+          <input type="text" class="input-block-level" placeholder="Enter Email Address">
+          <input type="password" class="input-block-level" placeholder="Enter Password">
+          <input type="password" class="input-block-level" placeholder="Repeat Password">
+</form>
+           
+</div>  
+<div class="modal-footer">  
+<a href="#" class="btn btn-success">Create Account</a>  
+<a href="#" class="btn" data-dismiss="modal">Cancel</a>  
+</div>  
+</div>  
+</div>  
+ 
+
+
+
   </body>
 </html>
