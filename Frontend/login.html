@@ -15,15 +15,16 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #FF8000;
+        padding-left: 10px;
+       
+        padding-bottom: 60px;
+        background-color: #210B61;
       }
 
       .form-signin {
         max-width: 320px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
+        padding: 5px 29px 29px;
+        margin: 0 auto 10px;
         background-color: #fff;
         border: 1px solid #e5e5e5;
         -webkit-border-radius: 5px;
@@ -47,6 +48,10 @@
         margin-bottom: 15px;
         padding: 7px 9px;
       }
+      .navbar{
+         padding-left: 1px;
+        padding-right: 10px;
+      }
 
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -60,11 +65,21 @@
   </head>
 
   <body>
-    <div class="row">
-      <div class="span10">...</div>
-      <div class="span2">
+      <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+      <a class="brand" href="login.html">Home</a>
+        <a class="brand" href="contacts.html">Contact</a>
+        <a class="brand" href="Information.html">About us</a>
+    
+  </div>
+</div>
+        <div class="row-fluid">
+          <div class="container-fluid">
+      <div class="span8"></div>
+
+      <div class="span4">
         <br><br><br>
-        <div class="container">
+        
 
         <form class="form-signin">
           <h3 class="form-signin-heading">Quick Results</h3>
@@ -104,7 +119,7 @@
   </div>
   <div class="modal-footer">
     <a href="#" class="btn btn-success">Create Account</a>  
-    <a href="#" class="btn" data-dismiss="modal">Cancel</a>  
+    <a href="#" class="btn btn-primary" data-dismiss="modal">Cancel</a>  
   </div>
 </div>
 
