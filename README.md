@@ -10,7 +10,7 @@ We are gonna kick <em>results.vtu.ac.in</em>'s a$$ ;D ...
 
 ##Screenies
 <p align="center">
-  <img src="http://i.imgur.com/SVMmVdE.png?raw=true" alt="homepage"/>
+  <img src="http://i.imgur.com/XbWjedA.png?raw=true" alt="homepage"/>
 </p>
 
 ##Done 
