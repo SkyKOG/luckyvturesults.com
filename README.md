@@ -1,5 +1,6 @@
 luckyvturesults.com
 ===================
+[![endorse](https://api.coderwall.com/skykog/endorsecount.png)](https://coderwall.com/skykog)
 
 ##Our brainchild luckyvturesults.com
 
