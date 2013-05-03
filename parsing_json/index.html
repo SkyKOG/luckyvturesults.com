@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Sample</title>
+</head>
+<body>
+    <div id="placeholder"></div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script>
+    console.log("hello");
+  $.getJSON('test.json', function(data) {
+        var output= data.count + "" + data.created;
+        console.log(output);
+        document.getElementById("placeholder").innerHTML=output;
+
+  });
+    </script>
+</body>
+</html>
