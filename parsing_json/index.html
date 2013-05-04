@@ -5,15 +5,28 @@
     <title>JSON Sample</title>
 </head>
 <body>
-    <div id="placeholder"></div>
+    <div id="stu_name"></div>
+    <div id="stu_sem"></div>
+    <div id="stu_result"></div>
+    <div id="stu_sub"></div>
+    
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
     <script>
     console.log("hello");
   $.getJSON('test.json', function(data) {
-        var output= data.count + "" + data.created;
+        var output= data.results.body.div.div[0].strong;
+	var output2= data.results.body.div.div[0].table[0].tr.td[0].strong + "" + data.results.body.div.div[0].table[0].tr.td[1].strong;
+	var output3= data.results.body.div.div[0].table[0].tr.td[3].p.strong;
+	
+	
         console.log(output);
-        document.getElementById("placeholder").innerHTML=output;
+        document.getElementById("stu_name").innerHTML=output;
+	document.getElementById("stu_sem").innerHTML=output2;
+	document.getElementById("stu_result").innerHTML=output3;
+	$.each(data.results.body.div.div[0].table[1].tr[0].td, function(i, item) {
+    alert(data.results.body.div.div[0].table[1].tr[0].td[i].p);
+})
 
   });
     </script>
