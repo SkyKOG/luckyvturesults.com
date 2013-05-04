@@ -8,7 +8,14 @@
     <div id="stu_name"></div>
     <div id="stu_sem"></div>
     <div id="stu_result"></div>
-    <div id="stu_sub"></div>
+    <div id="subject"></div>
+    <div id="marks_external"></div>
+    <div id="marks_internal"></div>
+    <div id="marks_total"></div>
+    <div id="result"></div>
+    <div id = "links"> </div>
+    
+    
     
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
@@ -27,8 +34,119 @@
 	$.each(data.results.body.div.div[0].table[1].tr[0].td, function(i, item) {
     alert(data.results.body.div.div[0].table[1].tr[0].td[i].p);
 })
+	var output = '';
+    var output2 = '';
+    var output3 = '';
+    var output4 = '';
+    var output5 = '';
 
-  });
+    
+    for ( var i=0; i<=data.results.body.div.div[0].table[1].tr[1].td.length; i++) {
+
+        for(key in data.results.body.div.div[0].table[1].tr[1].td[i]) {
+
+            output += '<p>' + data.results.body.div.div[0].
+            table[1].tr[1].td[i][key] + '</p>' + '<br>' ;
+
+            // output2 += '<p>' + data.results.body.div.div[0].
+            // table[1].tr[1].td[i][key].p + '</p>' + '<br>' ;
+
+
+            // output3 += '<p>' + data.results.body.div.div[0].
+            // table[1].tr[1].td[i][key].p + '</p>' + '<br>' ;
+
+
+            // output4 += '<p>' + data.results.body.div.div[0].
+            // table[1].tr[1].td[i][key].p + '</p>' + '<br>' ;
+
+
+            // output5 += '<p>' + data.results.body.div.div[0].
+            // table[1].tr[1].td[i][key].strong + '</p>' + '<br>' ;
+
+            console.log(output);
+        }
+    }
+var update = document.getElementById("links");
+update.innerHTML = output;
+// update.innerHTML = output2;
+// update.innerHTML = output3;
+// update.innerHTML = output4;
+// update.innerHTML = output5;
+
+
+
+
+
+
+
+// 	$.each(data.results.body.div.div[0].table[1].tr, function(i, item) {
+// 	var i = 1;
+// 	$.each(data.results.body.div.div[0].table[1].tr[i].td, function(j, item) {
+    
+//     }
+//     console.log(data.results.body.div.div[0].table[1].tr[1].td[key])
+// })})
+//     var update = document.getElementById(links);
+//     update.innerHTML = output;
+// 	// var subject = new Array();
+	// for(var k=0; k<8; k++)
+ //        {
+	// subject[k] = data.results.body.div.div[0].table[1].tr[i].td[0].em;
+	// i= i+1;
+ //        }
+// 	console.log(subject);
+// })})
+// 	for(var i=0; i<8; i++)
+// 	{
+// 	document.getElementById("subject").innerHTML= subject[i];
+// 	}
+	
+	
+
+/*	$.each(data.results.body.div.div[0].table[1].tr, function(i, item) {
+	var i = 1;
+	$.each(data.results.body.div.div[0].table[1].tr[i].td, function(j, item) {
+	var ext = new Array();
+	for(var k=0; k<8; k++)
+        {
+	ext[k] = data.results.body.div.div[0].table[1].tr[i].td[j].p;
+	i= i+1;
+        }
+	console.log(ext);
+})})
+	
+
+	/*var external= new Array();
+	for(var k=0; k<8; k++)
+	{
+	var i=1;
+	external[k] = data.results.body.div.div[0].table[1].tr[i].td[1].p;
+	i=i+1;
+	}
+	console.log(external);
+	var internals;
+	internals = internals + data.results.body.div.div[0].table[1].tr[i].td[j].p;
+	var total;
+	total = total + data.results.body.div.div[0].table[1].tr[i].td[j].p;
+	var results;
+	results = results + data.results.body.div.div[0].table[1].tr[i].td[j].strong;
+	i= i+1;
+	for(var i=0; i<8; i++)
+	{
+	document.getElementById("subject").innerHTML= subject[i];
+	}
+	document.getElementById("marks_external").innerHTML= external;
+	document.getElementById("marks_internal").innerHTML= internals;
+	document.getElementById("marks_total").innerHTML= total;
+	document.getElementById("result").innerHTML= results;
+	
+	
+       */
+
+
+	
+
+});
     </script>
 </body>
 </html>
