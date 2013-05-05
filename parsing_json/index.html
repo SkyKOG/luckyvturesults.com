@@ -32,54 +32,59 @@
     alert(data.results.body.div.div[0].table[1].tr[0].td[i].p);
     })
 	var output = '';
+    var k =  data.results.body.div.div[0].table[1].tr.length;
 
-    for ( var i=0; i<=data.results.body.div.div[0].table[1].tr[1].td.length; i++) {
+    for (var j=1; j<k; j++) {
+        
+        for ( var i=0; i<=5; i++) {
 
-
-        for(key in data.results.body.div.div[0].table[1].tr[1].td[i]) {
+            for(key in data.results.body.div.div[0].table[1].tr[j].td[i]) {
 
             if(typeof data.results.body.div.div[0].
-            table[1].tr[1].td[i].em === "undefined"){
+            table[1].tr[j].td[i].em === "undefined"){
                 continue;
             }
 
-            
+
 
             output += '<p>' + data.results.body.div.div[0].
-            table[1].tr[1].td[i].em + '</p>' + '<br>' ;
+            table[1].tr[j].td[i].em + '</p>' + '<br>' ;
             break;
         }
 
-        for(key in data.results.body.div.div[0].table[1].tr[1].td[i]) {
+        for(key in data.results.body.div.div[0].table[1].tr[j].td[i]) {
 
 
             if(typeof data.results.body.div.div[0].
-            table[1].tr[1].td[i].p === "undefined"){
+            table[1].tr[j].td[i].p === "undefined"){
                 continue;
             }
 
             output += '<p>' + data.results.body.div.div[0].
-            table[1].tr[1].td[i].p + '</p>' + '<br>' ;
+            table[1].tr[j].td[i].p + '</p>' + '<br>' ;
             break;
         }
 
-        for(key in data.results.body.div.div[0].table[1].tr[1].td[i]) {
+        for(key in data.results.body.div.div[0].table[1].tr[j].td[i]) {
 
 
             if(typeof data.results.body.div.div[0].
-            table[1].tr[1].td[i].strong === "undefined"){
+            table[1].tr[j].td[i].strong === "undefined"){
                 continue;
             }
 
             output += '<p>' + data.results.body.div.div[0].
-            table[1].tr[1].td[i].strong + '</p>' + '<br>' ;
+            table[1].tr[j].td[i].strong + '</p>' + '<br>' ;
             break;
         }
 
     }
+}
+
     var update = document.getElementById("links");
     update.innerHTML = output;	
-    console.log(output);
+   
+
 });
     </script>
 </body>
