@@ -10,13 +10,22 @@ new YQL.exec(queryname, function(response) {
 	else {
         
         var studentname  = response.query.results.body.div.div[0].strong;
-        console.log("Student Name : " + studentname.toProperCase());
-
         var semester = response.query.results.body.div.div[0].table[0].tr.td[1].strong;
-        console.log("Semester : " + semester);
-
         var resultstatus = response.query.results.body.div.div[0].table[0].tr.td[3].p.strong;
-        console.log(resultstatus.toProperCase());
+        
+        var studentusn = studentname.split('(')[1];
+        studentusn = studentusn.split(')')[0];
+        studentname = studentname.split('(')[0];
+        resultstatus = resultstatus.substring(9);
+
+        studentname = studentname.toProperCase();
+        studentusn = studentusn.toUpperCase();
+        resultstatus = resultstatus.toProperCase();
+        
+        console.log("Student Name : " + studentname);
+        console.log("Student USN : " + studentusn);
+        console.log("Semester : " + semester);
+        console.log("Result : " + resultstatus);
 	}
 });  
 
