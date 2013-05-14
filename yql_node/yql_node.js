@@ -1,7 +1,22 @@
 var YQL = require('yql');
 var $ = require('jquery');
 
-var queryname = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=1MV09IS003'";
+
+var inputusn="1MV09IS002";
+var inputsem=7;
+
+while(inputsem>=1) {
+var querybuild1 = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=";
+querybuild1 = querybuild1.concat(inputusn);
+var querybuild2 = "&sem=";
+var n = querybuild1.concat(querybuild2);
+
+finalone=n.concat(inputsem);
+finalone=finalone + "\'";
+
+//var queryname = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=1MV09IS001'";
+
+var queryname=finalone;
 
 new YQL.exec(queryname, function(response) {
 
@@ -71,6 +86,8 @@ new YQL.exec(queryname, function(response) {
     }
     console.log(output);
 });  
+ inputsem--;
+}
 
 String.prototype.toProperCase = function() {
       return this.toLowerCase().replace(/^(.)|\s(.)/g, 
