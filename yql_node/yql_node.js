@@ -1,7 +1,7 @@
 var YQL = require('yql');
 var $ = require('jquery');
 
-var queryname = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=1MV09IS002'";
+var queryname = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=1MV09IS003'";
 
 new YQL.exec(queryname, function(response) {
 
@@ -29,9 +29,9 @@ new YQL.exec(queryname, function(response) {
         console.log("Result : " + resultstatus);
 
 
-        $.each(response.query.results.body.div.div[0].table[1].tr[0].td, function(i, item) {
+       /* $.each(response.query.results.body.div.div[0].table[1].tr[0].td, function(i, item) {
                 console.log(response.query.results.body.div.div[0].table[1].tr[0].td[i].p);
-                    })
+                    }) */
 
 
         var output = '';
@@ -42,21 +42,26 @@ new YQL.exec(queryname, function(response) {
                         if(typeof response.query.results.body.div.div[0].table[1].tr[j].td[i].em === "undefined"){
                              continue;
                             }
-                            output += response.query.results.body.div.div[0].table[1].tr[j].td[i].em + " " ;
+                            output +="Subject : " + response.query.results.body.div.div[0].table[1].tr[j].td[i].em + " " + "\n";
                             break;
                          }
                     for(key in response.query.results.body.div.div[0].table[1].tr[j].td[i]) {
                         if(typeof response.query.results.body.div.div[0].table[1].tr[j].td[i].p === "undefined"){
                              continue;
                             }
-                            output += response.query.results.body.div.div[0].table[1].tr[j].td[i].p + " ";
+                            if(i==1)
+                                output +="External : " + response.query.results.body.div.div[0].table[1].tr[j].td[i].p + " " + "\n" ;
+                            if(i==2)
+                                output +="Internal : " + response.query.results.body.div.div[0].table[1].tr[j].td[i].p + " " + "\n" ;
+                            if(i==3)
+                                output +="Total : " + response.query.results.body.div.div[0].table[1].tr[j].td[i].p + " " + "\n" ; 
                             break;
                          }
                     for(key in response.query.results.body.div.div[0].table[1].tr[j].td[i]) {
                         if(typeof response.query.results.body.div.div[0].table[1].tr[j].td[i].strong === "undefined"){
                              continue;
                              }
-                            output += response.query.results.body.div.div[0].table[1].tr[j].td[i].strong + " ";
+                            output +="Status : " + response.query.results.body.div.div[0].table[1].tr[j].td[i].strong + " " + "\n";
                             break;
                          }
 
