@@ -2,9 +2,12 @@ var YQL = require('yql');
 var $ = require('jquery');
 
 
-var inputusn="1MV09IS002";
-var inputsem=7;
-
+var inputusn = "1MV09IS00";
+var inputsem = 7;
+var usninit = 2;
+while(usninit<=9){
+//    console.log("USN : " + usninit);
+    inputusn=inputusn.concat(usninit);
 while(inputsem>=1) {
 var querybuild1 = "select * from html where url='http://www.vtualerts.com/results/get_res.php?usn=";
 querybuild1 = querybuild1.concat(inputusn);
@@ -86,7 +89,8 @@ new YQL.exec(queryname, function(response) {
     }
     console.log(output);
 });  
- inputsem--;
+ inputsem--;}
+ usninit++;
 }
 
 String.prototype.toProperCase = function() {
