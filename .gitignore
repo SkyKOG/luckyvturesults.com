@@ -16,3 +16,4 @@ node_modules
 
 .package.json.un~
 ..gitignore.un~
+.README.md.un~
