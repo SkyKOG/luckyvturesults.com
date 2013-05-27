@@ -10,6 +10,8 @@
     "jade": "*",
     "jquery":"*",
     "yql":"*",
-    "async":"*"
+    "async":"*",
+    "mongodb":"*",
+    "mongojs":"*"
   }
 }
