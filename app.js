@@ -8,7 +8,7 @@ var express = require('express'),
     path = require('path'),
     async = require('async');
 
-var databaseUrl = "vtu"; // "username:password@example.com/mydb"
+var databaseUrl = "vtu";
 var collections = ["mongostuds"]
 var db = require("mongojs").connect(databaseUrl, collections);    
 
@@ -151,7 +151,7 @@ app.get("/luckyvtu/:usnexpress", function (req, res) {
                     }); 
 
                     //console.log(output);
-                    res.send(studentname+studentusn);
+                    res.send(newjson);
                 }
             });
         }
