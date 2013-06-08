@@ -25,6 +25,7 @@ We are gonna kick <em>results.vtu.ac.in</em>'s a$$ ;D ...
     sudo add-apt-repository ppa:chris-lea/node.js
     sudo apt-get update
     sudo apt-get install nodejs
+    sudo apt-get install mongodb
 <strong>Running the project</strong>
     
     git clone git@github.com:SkyKOG/luckyvturesults.com.git
