@@ -11,7 +11,7 @@
     "jquery":"*",
     "yql":"*",
     "async":"*",
-    "mongodb":".",
-    "mongojs":"."
+    "mongodb":"*",
+    "mongojs":"*"
   }
 }
